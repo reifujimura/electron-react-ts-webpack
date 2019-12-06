@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint", "jest"],
+  "env": { "node": true, "es6": true, "jest/globals": true },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "tsconfig.json"
+  },
+  "ignorePatterns": [
+    "webpack.config.js",
+    "jest.config.js",
+    "babel.config.js",
+    ".vscode/",
+    "node_modules/",
+    "dist/"
+  ]
+}
