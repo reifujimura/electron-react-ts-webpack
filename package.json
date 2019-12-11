@@ -6,8 +6,9 @@
   "scripts": {
     "build": "webpack --mode development",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test": "jest",
-    "storybook": "start-storybook"
+    "test": "NODE_ENV=test jest",
+    "storybook": "start-storybook",
+    "storyshots": "NODE_ENV=test jest -c ./.storybook/jest.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
