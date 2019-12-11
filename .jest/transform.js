@@ -10,6 +10,7 @@ module.exports = require("babel-jest").createTransformer({
   plugins: [
     "require-context-hook",
     "@babel/plugin-transform-modules-commonjs",
-    "@babel/plugin-proposal-optional-chaining"
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator"
   ]
 });
