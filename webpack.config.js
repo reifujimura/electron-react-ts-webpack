@@ -32,10 +32,13 @@ module.exports = [
   },
   {
     target: "electron-renderer",
-    entry: path.resolve(SourceDirectory, "index.tsx"),
+    entry: {
+      index: path.resolve(SourceDirectory, "index.tsx"),
+      preload: path.resolve(SourceDirectory, "preload.ts")
+    },
     output: {
       path: DistDirectory,
-      filename: "index.js"
+      filename: "[name].js"
     },
     module: {
       rules: [
@@ -57,7 +60,7 @@ module.exports = [
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(SourceDirectory, "index.html"),
-        inject: false
+        chunks: ["index"]
       })
     ]
   }

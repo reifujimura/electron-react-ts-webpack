@@ -9,7 +9,7 @@ app.on("ready", () => {
   mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: false,
-      preload: path.resolve(DistDirectory, "index.js")
+      preload: path.resolve(DistDirectory, "preload.js")
     }
   });
   if (process.env.NODE_ENV === "development") {
