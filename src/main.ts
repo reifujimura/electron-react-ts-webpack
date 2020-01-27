@@ -12,6 +12,9 @@ app.on("ready", () => {
       preload: path.resolve(DistDirectory, "index.js")
     }
   });
+  if (process.env.NODE_ENV === "development") {
+    mainWindow.webContents.openDevTools({ mode: "detach" });
+  }
   mainWindow.loadFile(path.resolve(DistDirectory, "index.html"));
   mainWindow.on("close", () => {
     mainWindow = null;
