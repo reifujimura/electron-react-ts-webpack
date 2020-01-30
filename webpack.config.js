@@ -10,6 +10,7 @@ module.exports = [
     entry: path.resolve(SourceDirectory, "main.ts"),
     output: {
       path: DistDirectory,
+      publicPath: "/",
       filename: "main.js"
     },
     module: {
